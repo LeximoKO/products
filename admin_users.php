@@ -28,10 +28,10 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Каталог товаров</title>
 
-    <meta name="description" content="Internetowy katalog produktów" />
-    <meta name="keywords" content="katalog, produkty, online" />
+    <meta name="description" content="Каталог товаров" />
+    <meta name="keywords" content="каталог, товары, online" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -68,7 +68,7 @@
                     }
                     ?>
 
-                    <h1>Katalog Produktów</h1>
+                    <h1>Каталог товаров</h1>
 
                 </div>
             </header>
@@ -87,38 +87,39 @@
             <main>
                 <div class="main-content">
                     <div class="container">
-                        <h2 class="page-title">Zarządzenie użytkownikami</h2>
+                        <h2 class="page-title">Управление пользователями</h2>
                         <?php
-                            if(isset($_GET['name_error'])){
-                                echoAlert("danger", "Błąd!", "Użytkownik o podanej nazwie już istnieje!");
-                            }
-                            else if(isset($_GET['del_result'])){
-                                if($_GET['del_result'] == true){
-                                    echoAlert("success", "Sukces!", "Użytkownik został usunięty!");
-                                }
-                                else{
-                                    echoAlert("danger", "Błąd!", "Nie udało się usunąć użytkownika!");
-                                }
-                            }
-                            else if(isset($_GET['update_result'])){
-                                if($_GET['update_result'] == true){
-                                    echoAlert("success", "Sukces!", "Dane użytkownika zostały zaktualizowane!");
-                                }
-                                else{
-                                    echoAlert("danger", "Błąd!", "Nie udało się zaktualizować danych użytkownika!");
-                                }
-                            }          
-                        ?>
+if(isset($_GET['name_error'])){
+    echoAlert("danger", "Ошибка!", "Пользователь с указанным именем уже существует!");
+}
+else if(isset($_GET['del_result'])){
+    if($_GET['del_result'] == true){
+        echoAlert("success", "Успех!", "Пользователь был удален!");
+    }
+    else{
+        echoAlert("danger", "Ошибка!", "Не удалось удалить пользователя!");
+    }
+}
+else if(isset($_GET['update_result'])){
+    if($_GET['update_result'] == true){
+        echoAlert("success", "Успех!", "Данные пользователя были обновлены!");
+    }
+    else{
+        echoAlert("danger", "Ошибка!", "Не удалось обновить данные пользователя!");
+    }
+}
+?>
+
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="align-middle" style="width: 10%">ID</th>
-                                        <th class="align-middle" style="width: 30%">Nazwa użytkownika</th>
-                                        <th class="align-middle" style="width: 35%">Adres e-mail</th>
-                                        <th class="align-middle" style="width: 15%">Rodzaj konta</th>
-                                        <th class="align-middle" style="width: 5%">Edytuj</th>
-                                        <th class="align-middle" style="width: 5%">Usuń</th>
+                                        <th class="align-middle" style="width: 30%">Имя пользователя</th>
+                                        <th class="align-middle" style="width: 35%">Адрес e-mail</th>
+                                        <th class="align-middle" style="width: 15%">Тип контакта</th>
+                                        <th class="align-middle" style="width: 5%">Редактировать</th>
+                                        <th class="align-middle" style="width: 5%">Удалить</th>
                                     </tr>
                                 </thead>
                                 <tbody>

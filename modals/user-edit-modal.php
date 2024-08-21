@@ -18,7 +18,7 @@
 
 
             <div class="modal-header">
-                <h4 class="modal-title">Edytuj użytkownika</h4>
+                <h4 class="modal-title">Редактировать пользователя</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -26,32 +26,32 @@
             <div class="modal-body">
                 <form method="post" action="admin/update_user.php?user_id=<?php echo $_GET['user_id']; ?>">
                     <div class="form-group">
-                        <label for="userName">Nazwa użytkownika:</label>
+                        <label for="userName">Имя пользователя:</label>
                         <input type="text" class="form-control" id="userName" name="userName"
                             value="<?php echo $edit_user_row['user_name']; ?>">
                     </div>
                     <div class="form-group">
-                        <label for="userEmail">E-mail użytkownika:</label>
+                        <label for="userEmail">E-mail пользователя:</label>
                         <input type="text" class="form-control" id="userEmail" name="userEmail"
                             value="<?php echo $edit_user_row['user_email']; ?>">
                     </div>
                     <div class="form-group">
-                        <label for="userType">Rodzaj konta:</label>
+                        <label for="userType">Тип контакта:</label>
                         <select class="form-control" id="userType" name="userType">
                             <option value="1" <?php if($edit_user_row['type_id'] == 1) echo " selected"; ?> >
                                 Administrator</option>
                             <option value="2" <?php if($edit_user_row['type_id'] == 2) echo " selected"; ?> >
-                                Użytkownik</option>
+                                User</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Zapisz</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
                 </form>
             </div>
 
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Anuluj</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
             </div>
 
         </div>

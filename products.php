@@ -51,8 +51,8 @@
 
   <title>Katalog produktów</title>
 
-  <meta name="description" content="Internetowy katalog produktów" />
-  <meta name="keywords" content="katalog, produkty, online" />
+  <meta name="description" content="Каталог товаров" />
+  <meta name="keywords" content="каталог, товары, online" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -129,15 +129,15 @@
                   <div class="form-group mb-2">
                     <label for="sortType">Sortuj:</label>
                     <select class="custom-select filters-select" name="srt">
-                      <option value="new" <?php if($sort_type=="new") echo "selected"; ?>>Od najnowszego</option>
-                      <option value="pasc" <?php if($sort_type=="pasc") echo "selected"; ?>>Po cenie rosnąco</option>
-                      <option value="pdesc" <?php if($sort_type=="pdesc") echo "selected"; ?>>Po cenie malejąco</option>
-                      <option value="az" <?php if($sort_type=="az") echo "selected"; ?>>Alfabetycznie A-Z</option>
-                      <option value="za" <?php if($sort_type=="za") echo "selected"; ?>>Alfabetycznie Z-A</option>
+                      <option value="new" <?php if($sort_type=="new") echo "selected"; ?>>От самых новых</option>
+                      <option value="pasc" <?php if($sort_type=="pasc") echo "selected"; ?>>По возрастанию цены</option>
+                      <option value="pdesc" <?php if($sort_type=="pdesc") echo "selected"; ?>>По убыванию цены</option>
+                      <option value="az" <?php if($sort_type=="az") echo "selected"; ?>>По алфавиту A-Z</option>
+                      <option value="za" <?php if($sort_type=="za") echo "selected"; ?>>По алфавиту Z-A</option>
                     </select>
                   </div>
                   <div class="form-group mx-md-3 mb-2">
-                    <label for="showItemsNum">Pokaż na stronie:</label>
+                    <label for="showItemsNum">Показать на странице:</label>
                     <select class="custom-select filters-select" name="dsp">
                       <option value="12" <?php if($per_page==12) echo "selected"; ?>>12</option>
                       <option value="24" <?php if($per_page==24) echo "selected"; ?>>24</option>
@@ -146,7 +146,7 @@
                   </div>
                   <div class="form-group mb-2">
                     <input type="hidden" name="page" value="<?php echo $page; ?>">
-                    <button type="submit" class="btn btn-primary">Zastosuj</button>
+                    <button type="submit" class="btn btn-primary">Применить</button>
                   </div>
                 </form>
               </div>

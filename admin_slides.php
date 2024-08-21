@@ -24,10 +24,10 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Кааталог товаров</title>
 
-    <meta name="description" content="Internetowy katalog produktów" />
-    <meta name="keywords" content="katalog, produkty, online" />
+    <meta name="description" content="Каталог товаров" />
+    <meta name="keywords" content="каталог, товары, online" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -64,7 +64,7 @@
                     }
                     ?>
 
-                    <h1>Katalog Produktów</h1>
+                    <h1>Кааталог товаров</h1>
 
                 </div>
             </header>
@@ -83,101 +83,99 @@
             <main>
                 <div class="main-content">
                     <div class="container">
-                        <h2 class="page-title">Ustawienia slajdów</h2>
+                        <h2 class="page-title">Управление слайдами</h2>
                         <?php
                         if (isset($_GET['up_err'])) {
                             if($_GET['up_err'] == 1){
-                                echoAlert("danger", "Błąd!", "Nie udało się przesłać obrazu pierwszego slajdu!");
-                            }
-                            else if($_GET['up_err'] == 2){
-                                echoAlert("danger", "Błąd!", "Nie udało się przesłać obrazu drugiego slajdu!");
-                            }
-                            else if($_GET['up_err'] == 3){
-                                echoAlert("danger", "Błąd!", "Nie udało się przesłać obrazu trzeciego slajdu!");
-                            }
-                        }
-                        if (isset($_GET['size_err'])) {
-                            if($_GET['size_err'] == 1){
-                                echoAlert("danger", "Błąd!", "Obraz pierwszego slajdu nie został przesłany, ponieważ rozmiar pliku jest zbyt duży!");
-                            }
-                            else if($_GET['size_err'] == 2){
-                                echoAlert("danger", "Błąd!", "Obraz drugiego slajdu nie został przesłany, ponieważ rozmiar pliku jest zbyt duży!");
-                            }
-                            else if($_GET['size_err'] == 3){
-                                echoAlert("danger", "Błąd!", "Obraz trzeciego slajdu nie został przesłany, ponieważ rozmiar pliku jest zbyt duży!");
-                            }
-                        }
-                        if(isset($_GET['up_err']) && $_GET['up_err'] == 0 && isset($_GET['size_err']) && $_GET['size_err'] == 0){
-                            echoAlert("success", "Sukces!", "Wszystkie slajdy zostały pomyślnie zaktalizowane!");
-                        }
-                        if (isset($_GET['del_result'])) {
-                            if ($_GET['del_result'] == true) {
-                                echoAlert("success", "Sukces!", "Slajd został usunięty!");
-                            } else {
-                                echoAlert("danger", "Błąd!", "Nie udało się usunąć slajdu!");
-                            }
-                        }
+                                echoAlert("danger", "Ошибка!", "Не удалось загрузить изображение первого слайда!");
+}
+else if($_GET['up_err'] == 2){
+    echoAlert("danger", "Ошибка!", "Не удалось загрузить изображение второго слайда!");
+}
+else if($_GET['up_err'] == 3){
+    echoAlert("danger", "Ошибка!", "Не удалось загрузить изображение третьего слайда!");
+}
+}
+if (isset($_GET['size_err'])) {
+    if($_GET['size_err'] == 1){
+        echoAlert("danger", "Ошибка!", "Изображение первого слайда не было загружено, так как размер файла слишком велик!");
+    }
+    else if($_GET['size_err'] == 2){
+        echoAlert("danger", "Ошибка!", "Изображение второго слайда не было загружено, так как размер файла слишком велик!");
+    }
+    else if($_GET['size_err'] == 3){
+        echoAlert("danger", "Ошибка!", "Изображение третьего слайда не было загружено, так как размер файла слишком велик!");
+    }
+}
+if(isset($_GET['up_err']) && $_GET['up_err'] == 0 && isset($_GET['size_err']) && $_GET['size_err'] == 0){
+    echoAlert("success", "Успех!", "Все слайды были успешно обновлены!");
+}
+if (isset($_GET['del_result'])) {
+    if ($_GET['del_result'] == true) {
+        echoAlert("success", "Успех!", "Слайд был удален!");
+    } else {
+        echoAlert("danger", "Ошибка!", "Не удалось удалить слайд!");
+    }
+}
+
                         ?>
                         <form action="admin/update_slides.php" method="post" enctype="multipart/form-data">
-                            <h4>Slajd 1:</h4>
+                            <h4>Слайд 1:</h4>
                             <div class="slide-cfg-wrapper">
                                 <div class="row justify-content-center">
                                     <img class="img-fluid img-slide-cfg mb-3" src="slides_img/slide1.jpg" alt="Slide1"
                                         onerror="this.onerror=null;this.src='slides_img/empty-slide.png';" />
                                 </div>
-                                <small class="form-text text-muted">Rekomendowany rozmiar: 1920x500,
+                                <small class="form-text text-muted">Рекомендуемый размер: 1920x500,
                                     maks. 15MB</small>
                                 <div class="form-group custom-file">
                                     <input type="file" class="form-control custom-file-input" id="slide1" name="slide1"
                                         accept="image/*">
-                                    <label class="custom-file-label" for="slide1">Wybierz plik ze slajdem</label>
+                                    <label class="custom-file-label" for="slide1">Выбери файл со слайдом</label>
                                 </div>
                                 <div class="form-group">
                                     <a href="admin/delete_slide_img.php?slide_nr=1">
-                                        <button type="button" class="btn btn-outline-danger btn-block">Usuń bieżące
-                                            zdjęcie</button>
+                                        <button type="button" class="btn btn-outline-danger btn-block">Удалить текущее изображение</button>
                                     </a>
                                 </div>
                             </div>
 
-                            <h4>Slajd 2:</h4>
+                            <h4>Слайд 2:</h4>
                             <div class="slide-cfg-wrapper">
                                 <div class="row justify-content-center">
                                     <img class="img-fluid img-slide-cfg mb-3" src="slides_img/slide2.jpg" alt="Slide1"
                                         onerror="this.onerror=null;this.src='slides_img/empty-slide.png';" />
                                 </div>
-                                <small class="form-text text-muted">Rekomendowany rozmiar: 1920x500,
+                                <small class="form-text text-muted">Рекомендуемый размер: 1920x500,
                                     maks. 15MB</small>
                                 <div class="form-group custom-file">
                                     <input type="file" class="form-control custom-file-input" id="slide2" name="slide2"
                                         accept="image/*">
-                                    <label class="custom-file-label" for="slide2">Wybierz plik ze slajdem</label>
+                                    <label class="custom-file-label" for="slide2">Выбери файл со слайдом</label>
                                 </div>
                                 <div class="form-group">
                                     <a href="admin/delete_slide_img.php?slide_nr=2">
-                                        <button type="button" class="btn btn-outline-danger btn-block">Usuń bieżące
-                                            zdjęcie</button>
+                                        <button type="button" class="btn btn-outline-danger btn-block">Удалить текущее изображение</button>
                                     </a>
                                 </div>
                             </div>
 
-                            <h4>Slajd 3:</h4>
+                            <h4>Слайд 3:</h4>
                             <div class="slide-cfg-wrapper">
                                 <div class="row justify-content-center">
                                     <img class="img-fluid img-slide-cfg mb-3" src="slides_img/slide3.jpg" alt="Slide1"
                                         onerror="this.onerror=null;this.src='slides_img/empty-slide.png';" />
                                 </div>
-                                <small class="form-text text-muted">Rekomendowany rozmiar: 1920x500,
+                                <small class="form-text text-muted">Рекомендуемый размер: 1920x500,
                                     maks. 15MB</small>
                                 <div class="form-group custom-file">
                                     <input type="file" class="form-control custom-file-input" id="slide3" name="slide3"
                                         accept="image/*">
-                                    <label class="custom-file-label" for="slide3">Wybierz plik ze slajdem</label>
+                                    <label class="custom-file-label" for="slide3">Выбери файл со слайдом</label>
                                 </div>
                                 <div class="form-group">
                                     <a href="admin/delete_slide_img.php?slide_nr=3">
-                                        <button type="button" class="btn btn-outline-danger btn-block">Usuń bieżące
-                                            zdjęcie</button>
+                                        <button type="button" class="btn btn-outline-danger btn-block">Удалить текущее изображение</button>
                                     </a>
                                 </div>
                             </div>

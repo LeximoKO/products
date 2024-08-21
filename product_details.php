@@ -28,10 +28,10 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Каталог товаров</title>
 
-    <meta name="description" content="Internetowy katalog produktów" />
-    <meta name="keywords" content="katalog, produkty, online" />
+    <meta name="description" content="Каталог товаров" />
+    <meta name="keywords" content="каталог, товары, online" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -78,7 +78,7 @@
             }
           ?>
 
-                    <h1>Katalog Produktów</h1>
+                    <h1>Каталог товаров</h1>
 
                 </div>
             </header>
@@ -129,7 +129,7 @@
                                                                         data-toggle='tooltip' 
                                                                         data-placement='bottom' 
                                                                         title='Zaloguj się aby dodać produkt do schowka'"; ?>>
-                                    Dodaj do schowka
+                                   Добавить в избранное
                                 </button>
                                 
                             </div>

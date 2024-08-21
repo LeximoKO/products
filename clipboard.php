@@ -30,7 +30,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Каталог товаров</title>
 
     <meta name="description" content="Internetowy katalog produktów" />
     <meta name="keywords" content="katalog, produkty, online" />
@@ -59,7 +59,7 @@
         <div class="main-page">
             <header>
                 <div class="jumbotron text-center">
-                    <h1>Katalog Produktów</h1>
+                    <h1>Каталог товаров</h1>
                 </div>
 
             </header>
@@ -84,11 +84,11 @@
                                     <thead class="thead-dark">
                                        <tr>
                                             <th class="align-middle" style="width: 10%"></th>
-                                            <th class="align-middle" style="width: 40%">Nazwa produktu</th>
-                                            <th class="align-middle" style="width: 15%">Cena</th>
-                                            <th class="align-middle" style="width: 15%">Ilość</th>
-                                            <th class="align-middle" style="width: 15%">Wartość</th>
-                                            <th class="align-middle" style="width: 5%">Usuń</th>
+                                            <th class="align-middle" style="width: 40%">Название товара</th>
+                                            <th class="align-middle" style="width: 15%">Цена</th>
+                                            <th class="align-middle" style="width: 15%">Количество</th>
+                                            <th class="align-middle" style="width: 15%">Сумма</th>
+                                            <th class="align-middle" style="width: 5%">удалить</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -122,7 +122,7 @@
                                                 </div>
                                             </td>
                                             <td class="text-center align-middle">
-                                                <span class="product-value"></span> zł
+                                                <span class="product-value"></span> AZN
                                             </td>
                                             <td class="text-center align-middle">
                                                 <?php  
@@ -145,8 +145,8 @@
                                     <tfoot style="background: #ededed;">
                                         <tr>
                                             <td colspan="6" class="text-center align-middle">
-                                                Łączna wartość:
-                                                <strong><span id="totalPrice"></span> zł</strong>
+                                               Общая стоимость:
+                                                <strong><span id="totalPrice"></span> AZN</strong>
                                             </td>
                                         </tr>
                                     </tfoot>
@@ -157,8 +157,7 @@
                         <div class="row">
                             <a href="generate-pdf.php">
                                 <button type="submit" class="btn btn-info" style="padding: 0.8rem;">
-                                    <i class="far fa-file-pdf mr-1" style="font-size: 1.5rem;"></i> Wygeneruj kosztorys
-                                    w PDF
+                                    <i class="far fa-file-pdf mr-1" style="font-size: 1.5rem;"></i> Сгенерировать смету в PDF
                                 </button>
                             </a>
                         </div>

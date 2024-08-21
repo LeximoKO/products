@@ -29,10 +29,10 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Каталог товаров</title>
 
-    <meta name="description" content="Internetowy katalog produktów" />
-    <meta name="keywords" content="katalog, produkty, online" />
+    <meta name="description" content="Каталог товаров" />
+    <meta name="keywords" content="каталог, товары, online" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -70,7 +70,7 @@
                     }
                     ?>
 
-                    <h1>Katalog Produktów</h1>
+                    <h1>Каталог товаров</h1>
 
                 </div>
             </header>
@@ -89,58 +89,57 @@
             <main>
                 <div class="main-content">
                     <div class="container">
-                        <h2 class="page-title">Zarządzenie produktami</h2>
+                        <h2 class="page-title">Управление товарами</h2>
                         <?php 
                         if(isset($_GET['name_error'])){
-                            echoAlert("danger", "Błąd!", "Produkt o podanej nazwie już istnieje!");
+                            echoAlert("danger", "Товар с таким названием уже существует!");
                         }
                         else if(isset($_GET['add_result'])){
                             if ($_GET['add_result'] == true) {
-                                echoAlert("success", "Sukces!", "Nowy produkt został dodany!");
+                                echoAlert("success", "Новый товар добаавлен!");
                             }
                             else {
-                                echoAlert("danger", "Błąd!", "Nie udało się dodać nowego produktu!");
+                                echoAlert("danger", "Неудалось добавить новый товар!");
                             }
                         }
                         else if(isset($_GET['del_result'])){
                             if($_GET['del_result'] == true){
-                                echoAlert("success", "Sukces!", "Produkt został usunięty!");
+                                echoAlert("success", "Товар удален!");
                             }
                             else{
-                                echoAlert("danger", "Błąd!", "Nie udało się usunąć produktu!");
+                                echoAlert("danger", "Товар не удален!");
                             }
 
                         }
                         else if(isset($_GET['update_result'])){
                             if($_GET['update_result'] == true){
-                                echoAlert("success", "Sukces!", "Produkt został zaktualizowany!");
+                                echoAlert("success", "Товар обновлен!");
                             }
                             else{
-                                echoAlert("danger", "Błąd!", "Nie udało się zaktualizować produktu!");
+                                echoAlert("danger", "Товар не обновлен!");
                             }
                         }
                         if(isset($_GET['img_size_error'])){
-                            echoAlert("warning", "Uwaga!", "Zdjęcie produktu nie zostało przesłane, ponieważ plik jest zbyt duży!");
+                            echoAlert("warning", "Внимание! Изображение продукта не было загружено, так как файл слишком большой!");
                         }    
                         
                     ?>
 
                         <button type="button" class="btn btn-primary add-btn" data-toggle="modal"
-                            data-target="#addProductModal">Dodaj
-                            produkt</button>
+                            data-target="#addProductModal">Добавить товар</button>
 
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="align-middle" style="width: 10%">ID</th>
-                                        <th class="align-middle" style="width: 10%">Zdjecie</th>
-                                        <th class="align-middle" style="width: 20%">Nazwa produktu</th>
-                                        <th class="align-middle" style="width: 25%">Opis</th>
-                                        <th class="align-middle" style="width: 12.5%">Kategoria</th>
-                                        <th class="align-middle" style="width: 12.5%">Cena</th>
-                                        <th class="align-middle" style="width: 5%">Edytuj</th>
-                                        <th class="align-middle" style="width: 5%">Usuń</th>
+                                        <th class="align-middle" style="width: 10%">Изображение</th>
+                                        <th class="align-middle" style="width: 20%">Название</th>
+                                        <th class="align-middle" style="width: 25%">Описание</th>
+                                        <th class="align-middle" style="width: 12.5%">Категория</th>
+                                        <th class="align-middle" style="width: 12.5%">Цена</th>
+                                        <th class="align-middle" style="width: 5%">Редактировать</th>
+                                        <th class="align-middle" style="width: 5%">Отмена</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -255,7 +254,7 @@
 
 
                 <div class="modal-header">
-                    <h4 class="modal-title">Dodaj nowy produkt</h4>
+                    <h4 class="modal-title">Добавить новый товар</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -263,18 +262,18 @@
                 <div class="modal-body">
                     <form method="post" enctype="multipart/form-data" action="admin/add_prod.php">
                         <div class="form-group">
-                            <label for="prodName">Nazwa produktu:</label>
+                            <label for="prodName">Название:</label>
                             <input type="text" class="form-control" id="prodName" name="prodName" required>
                         </div>
                         <div class="form-group">
-                            <label for="prodDesc">Opis:</label>
+                            <label for="prodDesc">Описание:</label>
                             <textarea type="text" class="form-control" id="prodDesc" name="prodDesc"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-lg-6">
-                                <label for="prodCat">Kategoria:</label>
+                                <label for="prodCat">Категория:</label>
                                 <select class="form-control" id="prodCat" name="prodCat">
-                                    <option value="" selected disabled hidden>Wybierz kategorię</option>
+                                    <option value="" selected disabled hidden>Выберите категорию</option>
                                     <?php 
                                         try {
                                             $stmt =  $user->runQuery("SELECT cat_id, cat_name FROM categories ORDER BY cat_name ASC");
@@ -292,10 +291,10 @@
                                 </select>
                             </div>
                             <div class="form-group col-lg-6">
-                                <label for="prodPrice">Cena:</label>
+                                <label for="prodPrice">Цена:</label>
                                 <div class="input-group mb-2">
                                     <div class="input-group-append">
-                                        <div class="input-group-text">PLN</div>
+                                        <div class="input-group-text">AZN</div>
                                     </div>
                                     <input type="text" class="form-control" id="prodPrice" name="prodPrice">
                                 </div>
@@ -303,16 +302,16 @@
                         </div>
                         <div class="form-group custom-file">
                             <input type="file" class="form-control custom-file-input" id="prodImg" name="prodImg" accept="image/*">
-                            <label class="custom-file-label" for="prodImg">Zdjęcie produktu (maks. 10MB)</label>
+                            <label class="custom-file-label" for="prodImg">Изображение товара (maks. 10MB)</label>
                         </div>
                                         
-                        <button type="submit" class="btn btn-primary">Dodaj</button>
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
                     </form>
                 </div>
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
                 </div>
 
             </div>

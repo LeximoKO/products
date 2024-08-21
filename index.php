@@ -20,10 +20,10 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Katalog produktów</title>
+  <title>Каталог товаров</title>
 
-  <meta name="description" content="Internetowy katalog produktów" />
-  <meta name="keywords" content="katalog, produkty, online" />
+  <meta name="description" content="Каталог товаров" />
+  <meta name="keywords" content="каталог, товары, online" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -61,7 +61,7 @@
             }
           ?>
 
-          <h1>Katalog Produktów</h1>
+          <h1>Каталог товаров</h1>
 
 
         </div>
@@ -124,7 +124,7 @@
 
             <section>
               <div class="section-header text-center">
-                <h1>Najnowsze produkty</h1>
+                <h1>Новинки</h1>
               </div>
 
               <div class="row">
@@ -136,7 +136,7 @@
 
             <section>
               <div class="section-header text-center">
-                <h1>Polecane kategorie</h1>
+                <h1>Топ категории</h1>
               </div>
               <div class="row">
                 <div class="col-lg-3 col-sm-6">

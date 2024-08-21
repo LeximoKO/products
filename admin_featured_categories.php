@@ -24,10 +24,10 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Каталог товаров</title>
 
-    <meta name="description" content="Internetowy katalog produktów" />
-    <meta name="keywords" content="katalog, produkty, online" />
+    <meta name="description" content="Каталог товаров" />
+    <meta name="keywords" content="каталог, товары, online" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -64,7 +64,7 @@
                     }
                     ?>
 
-                    <h1>Katalog Produktów</h1>
+                    <h1>Каталог товаров</h1>
 
                 </div>
             </header>
@@ -83,14 +83,14 @@
             <main>
                 <div class="main-content">
                     <div class="container">
-                        <h2 class="page-title">Ustawienia polecanych kategorii</h2>
+                        <h2 class="page-title">Настройки рекомендованных категорий</h2>
                         <?php
                         if(isset($_GET['update_result'])){
                             if ($_GET['update_result'] == true) {
-                                echoAlert("success", "Sukces!", "Polecane kategorie zostały zaktualizowane!");
+                                echoAlert("success", "Категория обновлена!");
                             }
                             else {
-                                echoAlert("danger", "Błąd!", "Nie udało się zaktualizować polecanych kategorii!");
+                                echoAlert("danger", "Категория не обновлена!");
                             }
                         }
                         ?>
@@ -98,7 +98,7 @@
                         <div class="card card-body bg-light">
                         <form action="admin/update_featured_categories.php" method="post">
                             <div class="form-group">
-                                <label for="featuredCat1">Polecana kategoria 1:</label>
+                                <label for="featuredCat1">Рекомендованная категория 1:</label>
                                 <select class="custom-select" name="featuredCat1">
                                     <?php 
                                         selectCategories($user, $settings['category_1']);
@@ -106,7 +106,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="featuredCat2">Polecana kategoria 2:</label>
+                                <label for="featuredCat2">Рекомендованная категори 2:</label>
                                 <select class="custom-select" name="featuredCat2">
                                     <?php 
                                         selectCategories($user, $settings['category_2']);
@@ -114,7 +114,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="featuredCat3">Polecana kategoria 3:</label>
+                                <label for="featuredCat3">Рекомендованная категори 3:</label>
                                 <select class="custom-select" name="featuredCat3">
                                     <?php 
                                         selectCategories($user, $settings['category_3']);
@@ -122,14 +122,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="featuredCat4">Polecana kategoria 4:</label>
+                                <label for="featuredCat4">Рекомендованная категори 4:</label>
                                 <select class="custom-select" name="featuredCat4">
                                     <?php 
                                         selectCategories($user, $settings['category_4']);
                                     ?>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Zapisz ustawienia</button>
+                            <button type="submit" class="btn btn-primary">Сохранить настройки</button>
                         </form>
                         </div>
                         </div>

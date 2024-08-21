@@ -36,8 +36,8 @@
 
 	<title>Zaloguj się - Katalog produktów</title>
 
-	<meta name="description" content="Internetowy katalog produktów">
-	<meta name="keywords" content="katalog, produkty, online">
+	<meta name="description" content="Каталог товаров">
+	<meta name="keywords" content="каталог, товары, online">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">

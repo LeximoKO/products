@@ -18,7 +18,7 @@
 
 
             <div class="modal-header">
-                <h4 class="modal-title">Edytuj produkt</h4>
+                <h4 class="modal-title">Редактировать товар</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -27,18 +27,18 @@
                 <form method="post" enctype="multipart/form-data"
                     action="admin/update_prod.php?prod_id=<?php echo $_GET['prod_id']; ?>">
                     <div class="form-group">
-                        <label for="prodName">Nazwa produktu:</label>
+                        <label for="prodName">Название товара:</label>
                         <input type="text" class="form-control" id="prodName" name="prodName"
                             value="<?php echo $edit_prod_row['prod_name']; ?>">
                     </div>
                     <div class="form-group">
-                        <label for="prodDesc">Opis:</label>
+                        <label for="prodDesc">Описание:</label>
                         <textarea type="text" class="form-control" id="prodDesc"
                             name="prodDesc"><?php echo $edit_prod_row['prod_desc']; ?></textarea>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-lg-6">
-                            <label for="prodCat">Kategoria:</label>
+                            <label for="prodCat">Категория:</label>
                             <select class="form-control" id="prodCat" name="prodCat">
                                 <?php 
                                         try {
@@ -59,10 +59,10 @@
                             </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="prodPrice">Cena:</label>
+                            <label for="prodPrice">Цена:</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
-                                    <div class="input-group-text">PLN</div>
+                                    <div class="input-group-text">AZN</div>
                                 </div>
                                 <input type="text" class="form-control" id="prodPrice" name="prodPrice"
                                     value="<?php echo $edit_prod_row['prod_price']; ?>">
@@ -77,14 +77,14 @@
                     <div class="form-group">
                         <a href="admin/delete_prod_img.php?prod_id=<?php echo $_GET['prod_id']?>"><button type="button" class="btn btn-outline-danger btn-block">Usuń bieżące zdjęcie</button></a>                
                     </div>
-                    <button type="submit" class="btn btn-primary">Zapisz</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
                 </form>
 
             </div>
 
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Anuluj</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
             </div>
 
         </div>

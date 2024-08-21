@@ -28,10 +28,10 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Katalog produktów</title>
+    <title>Каталог товаров</title>
 
-    <meta name="description" content="Internetowy katalog produktów" />
-    <meta name="keywords" content="katalog, produkty, online" />
+    <meta name="description" content="каталог продуктов" />
+    <meta name="keywords" content="каталог, продукты, онлайн" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
@@ -68,7 +68,7 @@
                     }
                     ?>
 
-                    <h1>Katalog Produktów</h1>
+                    <h1>Каталог товаров</h1>
                 </div>
             </header>
 
@@ -86,40 +86,39 @@
             <main>
                 <div class="main-content">
                     <div class="container">
-                        <h2 class="page-title">Zarządzenie kategoriami</h2>
+                        <h2 class="page-title">Управление категориями</h2>
                         <?php
                             if(isset($_GET['name_error'])){
-                                echoAlert("danger", "Błąd!", "Kategoria o podanej nazwie już istnieje!");
+                                echoAlert("danger", "Ошибка!", "Категория уже существует!");
                             }
                             else if(isset($_GET['add_result'])){
                                 if ($_GET['add_result'] == true) {
-                                    echoAlert("success", "Sukces!", "Nowa kategoria została dodana!");
+                                    echoAlert("success", "Новая категория добавлена!");
                                 }
                                 else {
-                                    echoAlert("danger", "Błąd!", "Nie udało się dodać nowej kategorii!");
+                                    echoAlert("danger", "Ошибка!", "Неудалось добаавить новую категорию!");
                                 }
                             }
                             else if(isset($_GET['del_result'])){
                                 if($_GET['del_result'] == true){
-                                    echoAlert("success", "Sukces!", "Kategoria została usunięta!");
+                                    echoAlert("success", "категория удалена!");
                                 }
                                 else{
-                                    echoAlert("danger", "Błąd", "Nie udało się usunąć kategorii");
+                                    echoAlert("danger", "Неудалось удалить категорию!");
                                 }
                             }
                             else if(isset($_GET['update_result'])){
                                 if($_GET['update_result'] == true){
-                                    echoAlert("success", "Sukces!", "Kategoria została zaktualizowana!");
+                                    echoAlert("success", "Категория обновлена!");
                                 }
                                 else{
-                                    echoAlert("danger", "Błąd!", "Nie udało się zaktualizować kategorii!");
+                                    echoAlert("danger", "Неудалось обновить категорию!");
                                 }
                             }     
                         ?>
 
                         <button type="button" class="btn btn-primary add-btn" data-toggle="modal"
-                            data-target="#addCategoryModal">Dodaj
-                            kategorię</button>
+                            data-target="#addCategoryModal">Добавить категорию</button>
 
 
                         <div class="table-responsive">
@@ -127,10 +126,10 @@
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="align-middle" style="width: 10%">ID</th>
-                                        <th class="align-middle" style="width: 30%">Nazwa kategorii</th>
-                                        <th class="align-middle" style="width: 50%">Opis</th>
-                                        <th class="align-middle" style="width: 5%">Edytuj</th>
-                                        <th class="align-middle" style="width: 5%">Usuń</th>
+                                        <th class="align-middle" style="width: 30%">Название категории</th>
+                                        <th class="align-middle" style="width: 50%">Описание</th>
+                                        <th class="align-middle" style="width: 5%">Редактировать</th>
+                                        <th class="align-middle" style="width: 5%">Удалить</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -217,7 +216,7 @@
 
 
                 <div class="modal-header">
-                    <h4 class="modal-title">Dodaj nową kategorię</h4>
+                    <h4 class="modal-title">Добавить новую категорию</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -225,21 +224,21 @@
                 <div class="modal-body">
                     <form method="post" action="admin/add_cat.php">
                         <div class="form-group">
-                            <label for="catName">Nazwa kategorii:</label>
+                            <label for="catName">Название категории:</label>
                             <input type="text" class="form-control" id="catName" name="catName" required>
                         </div>
                         <div class="form-group">
-                            <label for="catDesc">Opis:</label>
+                            <label for="catDesc">Описание:</label>
                             <textarea type="text" class="form-control" id="catDesc" name="catDesc"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Dodaj</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
                     </form>
                 </div>
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
                 </div>
 
             </div>
